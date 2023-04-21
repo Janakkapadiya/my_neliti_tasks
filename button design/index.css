@@ -1,0 +1,32 @@
+button::before{
+  content: "💾 "
+}
+
+button{
+  all: initial;
+  font-family: Arial;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 750;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+  padding: 10px 30px;
+  color: #383838;
+  background-color: #f5f5f5;
+  background: linear-gradient(to bottom, #f0f0f0 50%, #dcdcdc 50%);
+  margin: 20px;
+  border-radius: 7px;
+  box-shadow:2px 2px 3px -1px,
+    0px 0px 0px 5px rgb(203,200,200),
+    0px 0px 0px 7px rgb(255,255,255),
+    0px 0px 0px 9px rgb(135,132,154);
+  -moz-box-shadow: 2px 2px 3px -1px,
+    0px 0px 0px 5px rgb(203,200,200),
+    0px 0px 0px 7px rgb(255,255,255),
+    0px 0px 0px 9px hsl(248,10%,56%);
+  -webkit-box-shadow: 2px 2px 3px -1px,
+    0px 0px 0px 5px rgb(203,200,200),
+    0px 0px 0px 7px rgb(255,255,255),
+    0px 0px 0px 9px rgb(135,132,154);
+}
