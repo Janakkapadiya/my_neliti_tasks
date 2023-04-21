@@ -1,0 +1,17 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: lightsteelblue;
+  }
+
+td,th {
+    border: 1px solid #dacfcf;
+    padding: 5px;
+    justify-content: center;
+    text-align: center;
+  }
+
+  label{
+    justify-content: center;
+    text-align: center;
+  }

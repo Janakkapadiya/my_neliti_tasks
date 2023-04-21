@@ -1,0 +1,39 @@
+<html>
+  <head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+  </head>
+  <body>
+    <form method="post">
+      {% csrf_token %}
+      <label>Enter latitude: </label>{{form.latitude}}
+      <label>Enter longitude: </label>{{form.longitude}}
+      <button type="Submit">Get data</button>
+    </form>
+    {%if not data %}
+    <h1>Oops Coulden't fetch data</h1>
+    {% else %}
+    <table>
+      <tr>
+        <th>Date and Time</th>
+        <th>Temperature as {{data.air_temperature}}</th>
+        <th>Humidity as {{data.relative_humidity}}</th>
+        <th>Wind Speed as {{data.wind_speed}})</th>
+        <th>Wind Direction as {{data.wind_from_direction}}</th>
+        <th>Air Pressure as {{data.air_pressure_at_sea_level}}</th>
+      </tr>
+
+      {% for timeseries in wether_list %}
+      <tr>
+        <td>{{timeseries.time}}</td>
+        <td>{{timeseries.air_temperature_}}</td>
+        <td>{{timeseries.relative_humidity_}}</td>
+        <td>{{timeseries.wind_speed_}}</td>
+        <td>{{timeseries.wind_from_direction_}}</td>
+        <td>{{timeseries.air_pressure_at_sea_level_}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+    {% endif %}
+  </body>
+</html>
