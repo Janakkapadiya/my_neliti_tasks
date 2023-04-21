@@ -1,7 +1,7 @@
 def get_journal_statistics():
     summary = {}
-    for the_journal_id in Journal.objects.values_list('id', flat=True):
-        journal = Journal.objects.get(id=the_journal_id)
+    for journal_id in Journal.objects.values_list('id', flat=True):
+        journal = Journal.objects.get(id=journal_id)
         publications = journal.publication_set.all()
         downloads = 0
         views = 0
@@ -12,5 +12,5 @@ def get_journal_statistics():
                     downloads += 1
                 else:
                     views += 1
-        summary[the_journal_id] = (views, downloads)
+        summary[journal_id] = (views, downloads)
     return summary
