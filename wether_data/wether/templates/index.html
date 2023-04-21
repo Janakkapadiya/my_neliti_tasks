@@ -21,6 +21,7 @@
         <th>Wind Speed as {{data.wind_speed}})</th>
         <th>Wind Direction as {{data.wind_from_direction}}</th>
         <th>Air Pressure as {{data.air_pressure_at_sea_level}}</th>
+        <th>Cloud Area Fraction as {{data.cloud_area_fraction}}</th>
       </tr>
 
       {% for timeseries in wether_list %}
@@ -31,6 +32,7 @@
         <td>{{timeseries.wind_speed_}}</td>
         <td>{{timeseries.wind_from_direction_}}</td>
         <td>{{timeseries.air_pressure_at_sea_level_}}</td>
+        <td>{{timeseries.cloud_area_fraction_}}</td>
       </tr>
       {% endfor %}
     </table>
