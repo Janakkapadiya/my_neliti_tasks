@@ -33,7 +33,8 @@ def index(request):
                 'relative_humidity': str(list_of_data['properties']['meta']['units']['relative_humidity']),
                 'wind_speed': str(list_of_data['properties']['meta']['units']['wind_speed']),
                 'wind_from_direction': str(list_of_data['properties']['meta']['units']['wind_from_direction']),
-                'air_pressure_at_sea_level': str(list_of_data['properties']['meta']['units']['air_pressure_at_sea_level'])
+                'air_pressure_at_sea_level': str(list_of_data['properties']['meta']['units']['air_pressure_at_sea_level']),
+                'cloud_area_fraction': str(list_of_data['properties']['meta']['units']['cloud_area_fraction'])
             }
 
             time_series = list_of_data['properties']['timeseries']
@@ -46,7 +47,8 @@ def index(request):
                     'relative_humidity_': str(itr['data']['instant']['details']['relative_humidity']),
                     'wind_speed_': str(itr['data']['instant']['details']['wind_speed']),
                     'wind_from_direction_': str(itr['data']['instant']['details']['wind_from_direction']),
-                    'air_pressure_at_sea_level_': str(itr['data']['instant']['details']['air_pressure_at_sea_level'])
+                    'air_pressure_at_sea_level_': str(itr['data']['instant']['details']['air_pressure_at_sea_level']),
+                    'cloud_area_fraction_': str(itr['data']['instant']['details']['cloud_area_fraction'])
                 }
 
                 print(wether)
