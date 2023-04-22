@@ -24,7 +24,7 @@ button{
   -moz-box-shadow: 2px 2px 3px -1px,
     0px 0px 0px 5px rgb(203,200,200),
     0px 0px 0px 7px rgb(255,255,255),
-    0px 0px 0px 9px hsl(248,10%,56%);
+    0px 0px 0px 9px rgb(135,132,154);
   -webkit-box-shadow: 2px 2px 3px -1px,
     0px 0px 0px 5px rgb(203,200,200),
     0px 0px 0px 7px rgb(255,255,255),
